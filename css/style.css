@@ -34,12 +34,14 @@ time, mark, audio, video {
 }
 
 body {
-    font-size: 1em;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
 }
 
-header {
-    height: 67px;
+/* Header =================== */
+
+header, footer {
+    height: 55px;
     width: 100%;
     background-color: rgb(109, 194, 194);
 }
@@ -50,12 +52,13 @@ header {
     margin: 0 auto;
 }
 
-header .wrapper {
+header .wrapper,
+footer .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-header nav {
+nav {
     display: flex;
     justify-content: space-around;
     width: 40%;
@@ -67,6 +70,53 @@ header nav a {
     color: #000;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+
+/* Footer =================== */
+footer {
+    margin-top: 100px;
+    font-size: 0.8rem;
+}
+
+.copy {
+    font-family: Proxima;
+    font-weight: 400;
+    color: rgb(27, 73, 73);
+}
+
+.socials {
+    display: flex;
+}
+
+.socials a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(109, 194, 194);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.socials a:hover {
+    background-color: #fff;
+    color: rgb(109, 194, 194);
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: rgb(27, 73, 73);
+}
+
+.footer-nav a:hover {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
 }
 
 
