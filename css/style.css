@@ -200,12 +200,34 @@ article .article-img {
 .article-content i {
     padding: 0px 7px;
 }
+
+.articles {
+    margin-bottom: 30px;
+}
+main .more {
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+    height: 42px;
+    color:  rgb(109, 194, 194);
+    background-color: transparent;
+    border: 1px solid rgb(109, 194, 194);
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+main .more:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(109, 194, 194);
+}
+
 aside {
     flex: 1;
 }
 /* Footer =================== */
 footer {
-    margin-top: 100px;
+    margin-top: 30px;
     font-size: 0.8rem;
 }
 
