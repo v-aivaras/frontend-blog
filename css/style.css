@@ -223,10 +223,11 @@ main .more:hover {
     background-color: rgb(109, 194, 194);
 }
 
+
 /* Aside =================== */
 
 aside {
-    padding: 50px 10px;
+    padding: 50px 10px 0 30px;
     flex: 1;
     display:flex;
     flex-direction: column;
@@ -255,7 +256,57 @@ aside .searchbox input {
     font-size: 0.9rem;
 }
 
-
+.calendar-widget {
+	border: 1px solid rgb(109, 194, 194);
+    padding: 2px;
+	width: 100%;
+	border-radius: 10px;
+	margin-top: 38px;
+}
+.calendar-widget .calendar-top {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 38px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+    color: rgb(109, 194, 194);
+}
+.calendar-prev, .calendar-next {
+	color: #e5e5e5;
+}
+.calendar-widget table {
+	width: calc(100% + 4px);
+	margin-left: -2px;
+	border-radius: 0 0 10px 10px;
+}
+.calendar-widget table th {
+	height: 26px;
+	background: #e7e7e7;
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+}
+.calendar-widget table td {
+	height: 33px; 
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e5e5e5;
+	color: #e5e5e5;
+}
+.calendar-widget tr:last-child td:first-child {
+	border-radius: 0 0 0 10px;
+}
+.calendar-widget tr:last-child td:last-child {
+	border-radius: 0 0 10px 0;
+}
+.calendar-widget .current-month {
+	color: #4d4d4d;
+}
+.calendar-widget .current-day {
+	background-color: rgb(109, 194, 194);
+	color: #fff;
+}
 /* Footer =================== */
 footer {
     margin-top: 30px;
