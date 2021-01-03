@@ -20,7 +20,19 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+a { 
+    text-decoration: none;
+    color: #000;
+}
+
 /* =============================== */
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.woff) format('woff'),
+        url(../fonts/Roboto-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto-Regular.woff) format('woff'),
@@ -31,6 +43,21 @@ time, mark, audio, video {
     font-family: Proxima;
     src: url(../fonts/ProximaNova-Light.woff) format('woff'),
         url(../fonts/ProximaNova-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Proxima;
+    src: url(../fonts/ProximaNova-Regular.woff) format('woff'),
+        url(../fonts/ProximaNova-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Proxima;
+    src: url(../fonts/ProximaNova-Bold.woff) format('woff'),
+        url(../fonts/ProximaNova-Bold.ttf) format('truetype');
+    font-weight: 900;
+    
 }
 
 body {
@@ -50,11 +77,11 @@ header, footer {
     max-width: 1170px;
     height: 100%;
     margin: 0 auto;
+    display: flex;
 }
 
 header .wrapper,
 footer .wrapper {
-    display: flex;
     align-items: center;
     justify-content: space-around;
 }
@@ -67,12 +94,115 @@ nav {
 header nav a {
     font-family: 'Proxima', sans-serif;
     font-weight: 600;
-    color: #000;
     text-transform: uppercase;
-    text-decoration: none;
+    padding: 5px 10px;
 }
 
+header nav a:hover {
+    color: #fff;
+}
 
+/* Main =================== */
+main {
+    flex: 3;
+}
+
+h2 {
+    font-family: 'Proxima', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 10px 0 0 10px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+article .article-img {
+    flex: 1;
+}
+
+.article-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article-content {
+   flex: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding-left: 20px;
+}
+
+.article-content h3 a {
+    font-family: 'Proxima', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: rgb(109, 194, 194);
+}
+
+.article-content .meta{
+    margin: 8px 0;
+}
+.article-content .meta,
+.article-content .views,
+.article-content .comments {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.article-content .meta span::after {
+    content: "|";
+    padding-left: 2px;
+}
+
+.article-content .meta span:last-child::after {
+    display: none;
+}
+
+.article-content .meta .category a,
+.article-content .comments a {
+    color: rgb(109, 194, 194);
+    font-weight: 500;
+}
+
+.article-content .description {
+    color: #555;
+    font-family: 'Proxima', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 9px;
+}
+
+.article-content .description .read-more a {
+    color: rgb(109, 194, 194);
+    font-family: 'Proxima', sans-serif;
+}
+
+.article-content .description .read-more a:hover,
+.article-content .meta .category a:hover,
+.article-content .comments a:hover,
+.article-content h3 a:hover {
+    color: #000;
+}
+.article-content .views::after {
+    content: "|";
+    padding-left: 5px;
+    padding-right: 2px;
+}
+
+.article-content i {
+    padding: 0px 7px;
+}
+aside {
+    flex: 1;
+}
 /* Footer =================== */
 footer {
     margin-top: 100px;
@@ -80,9 +210,8 @@ footer {
 }
 
 .copy {
-    font-family: Proxima;
-    font-weight: 400;
-    color: rgb(27, 73, 73);
+    font-family: 'Proxima', sans-serif;
+    color: #fff;
 }
 
 .socials {
@@ -95,11 +224,10 @@ footer {
     border-radius: 50%;
     color: #fff;
     background-color: rgb(109, 194, 194);
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     margin-left: 10px;
 }
 
@@ -109,14 +237,9 @@ footer {
 }
 
 .footer-nav a {
-    text-decoration: none;
     color: rgb(27, 73, 73);
 }
 
 .footer-nav a:hover {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
+    color: #fff;
 }
-
-
