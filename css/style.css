@@ -75,7 +75,7 @@ header, footer {
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -105,14 +105,8 @@ header nav a:hover {
 
 /* Main =================== */
 main {
-    flex: 3;
-}
-
-h2 {
-    font-family: 'Proxima', sans-serif;
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin: 10px 0 0 10px;
+    flex: 4;
+    padding-top: 40px;
 }
 
 article {
@@ -151,7 +145,8 @@ article .article-img {
 }
 .article-content .meta,
 .article-content .views,
-.article-content .comments {
+.article-content .comments,
+aside .date {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #999;
@@ -227,7 +222,7 @@ main .more:hover {
 /* Aside =================== */
 
 aside {
-    padding: 50px 10px 0 30px;
+    padding: 40px 10px 0 30px;
     flex: 1;
     display:flex;
     flex-direction: column;
@@ -263,6 +258,7 @@ aside .searchbox input {
 	border-radius: 10px;
 	margin-top: 38px;
 }
+
 .calendar-widget .calendar-top {
 	display: flex;
 	justify-content: space-around;
@@ -272,14 +268,17 @@ aside .searchbox input {
 	border-radius: 10px 10px 0 0;
     color: rgb(109, 194, 194);
 }
+
 .calendar-prev, .calendar-next {
 	color: #e5e5e5;
 }
+
 .calendar-widget table {
 	width: calc(100% + 4px);
 	margin-left: -2px;
 	border-radius: 0 0 10px 10px;
 }
+
 .calendar-widget table th {
 	height: 26px;
 	background: #e7e7e7;
@@ -287,6 +286,7 @@ aside .searchbox input {
 	text-align: center;
 	vertical-align: middle;
 }
+
 .calendar-widget table td {
 	height: 33px; 
 	text-align: center;
@@ -294,18 +294,53 @@ aside .searchbox input {
 	border: 1px solid #e5e5e5;
 	color: #e5e5e5;
 }
+
 .calendar-widget tr:last-child td:first-child {
 	border-radius: 0 0 0 10px;
 }
+
 .calendar-widget tr:last-child td:last-child {
 	border-radius: 0 0 10px 0;
 }
+
 .calendar-widget .current-month {
 	color: #4d4d4d;
 }
+
 .calendar-widget .current-day {
 	background-color: rgb(109, 194, 194);
 	color: #fff;
+}
+
+.popular-news {
+    margin-top: 15px;
+}
+
+.popular-news h2 {
+    font-size: 1rem;
+    font-family: 'Proxima', sans-serif;
+    color: rgb(109, 194, 194);
+}
+
+.popular-news a {
+    font-size: 1rem;
+    font-family: 'Proxima', sans-serif;
+    color: #555;
+}
+
+.popular-news article {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popular-news article h3 {
+    font-size: 0.9rem;
+    color: #555;
+    
+}
+
+.popular-news article a:hover {
+    color: rgb(109, 194, 194);
 }
 /* Footer =================== */
 footer {
