@@ -222,6 +222,7 @@ main .more:hover {
 /* Aside =================== */
 
 aside {
+    min-width: 220px;
     padding: 40px 10px 0 30px;
     flex: 1;
     display:flex;
@@ -314,6 +315,7 @@ aside .searchbox input {
 
 .popular-news {
     margin-top: 15px;
+    text-align: center;
 }
 
 .popular-news h2 {
@@ -330,7 +332,7 @@ aside .searchbox input {
 
 .popular-news article {
     flex-direction: column;
-    align-items: flex-start;
+
 }
 
 .popular-news article h3 {
@@ -381,4 +383,83 @@ footer {
 
 .footer-nav a:hover {
     color: #fff;
+}
+
+/* Responsive =================== */
+@media (max-width: 1000px) {
+
+    main {
+        flex: 3;
+    }
+
+    main article {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    
+    main .article-content {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        height: 100px;
+        font-size: 1rem;
+    }
+
+    header .logo {
+        order: -3;
+    }
+
+    header .wrapper {
+        flex-wrap: wrap;
+    }
+    
+    nav {
+        width: 80%;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main article {
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+
+    main .article-content {
+        flex: 2;
+        text-align: left;
+    }
+
+    aside {
+        width: 70%;
+    }
+
+    footer {
+        height: 100px;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+   .copy {
+       order: 3;
+   }
+}
+
+@media (max-width: 600px) {
+    main article {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    main .article-content {
+        text-align: center;
+    }
 }
